@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Weather App Homepage</title>
+  <style>
+    /* Universal selector: applies basic box settings and clean fonts */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+ 
+    /* 1. Page Background Settings */
+    body {
+      background-color: #87ceeb; /* Sky blue fallback */
+      background-image: radial-gradient(circle, white 2px, transparent 3px); /* Dotted cloud pattern */
+      background-size: 40px 40px;
+      background-repeat: repeat; /* Tiles the dot pattern across the screen */
+      background-position: top center;
+      background-attachment: fixed; /* Keeps background stationary while scrolling */
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+ 
+    h1 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 5px;
+    }
+ 
+    .subtitle {
+      font-size: 18px;
+      color: #f0f8ff;
+      margin-bottom: 30px;
+    }
+ 
+    /* 2. Main Weather Card with Linear Gradient */
+    .weather-card {
+      width: 400px;
+      border: 3px solid white;
+      border-radius: 20px;
+      background-image: linear-gradient(to bottom right, #1e90ff, #87cefa); /* Smooth blue blend */
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+ 
+    /* 3. Floating Weather Icon & Animation Properties */
+    .weather-icon {
+      font-size: 70px;
+      display: inline-block;
+      animation: floatCloud 3s infinite alternate; /* Loops smoothly back and forth */
+      margin: 15px 0;
+    }
+ 
+    #temperature {
+      font-size: 48px;
+      font-weight: bold;
+      color: #fffacd;
+      margin: 10px 0;
+    }
+ 
+    .details {
+      font-size: 18px;
+      color: white;
+      margin: 6px 0;
+    }
+ 
+    /* 4. Forecast Section with Radial Gradient */
+    .forecast-section {
+      width: 600px;
+      border: 3px solid white;
+      border-radius: 15px;
+      background-image: radial-gradient(circle, white, #add8e6); /* Soft circular glow effect */
+      color: #003366;
+      padding: 25px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+ 
+    .forecast-title {
+      color: #003366;
+      margin-top: 0;
+      font-size: 22px;
+    }
+ 
+    .day {
+      border: 2px solid #4682b4;
+      border-radius: 8px;
+      font-size: 17px;
+      color: #003366;
+      padding: 12px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.4); /* Translucent rows */
+    }
+ 
+    /* Group selector for section headings */
+    h2, h3 {
+      color: white;
+    }
+ 
+    /* 5. Keyframes definition for the vertical drifting movement */
+    @keyframes floatCloud {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Weather App Homepage</h1>
+  <p class="subtitle">Check today's weather and plan your day better.</p>
+ 
+  <div class="weather-card">
+    <h2>Today's Weather</h2>
+    <div class="weather-icon">☁️</div>
+    <p id="temperature">28°C</p>
+    <p class="details">City: Bengaluru</p>
+    <p class="details">Condition: Partly Cloudy</p>
+    <p class="details">Humidity: 62%</p>
+    <p class="details">Wind Speed: 12 km/h</p>
+  </div>
+ 
+  <h2 style="margin-top: 10px; text-shadow: 1px 1px 4px rgba(0,0,0,0.2);">Weekly Forecast</h2>
+  
+  <div class="forecast-section">
+    <h3 class="forecast-title">Next 5 Days</h3>
+    <p class="day"><strong>Monday:</strong> Sunny - 30°C</p>
+    <p class="day"><strong>Tuesday:</strong> Cloudy - 27°C</p>
+    <p class="day"><strong>Wednesday:</strong> Rainy - 24°C</p>
+    <p class="day"><strong>Thursday:</strong> Windy - 26°C</p>
+    <p class="day"><strong>Friday:</strong> Stormy - 23°C</p>
+  </div>
+
+</body>
+</html>
